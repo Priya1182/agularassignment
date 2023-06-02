@@ -1,0 +1,22 @@
+<button class="btn btn-primary" (click)="goback()">back</button>
+
+<h1>Low Priority Tasks</h1>
+<mat-card *ngFor="let Obj of tasks" class="task bg-light">
+  <div *ngIf="Obj.priority.prName == 'low'">
+    <mat-card-header>
+      <mat-card-subtitle>{{ Obj.dueDate }}</mat-card-subtitle>
+      <mat-card-title>{{ Obj.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ Obj.desc }}</p>
+      <!--><p class="pr">
+            {{ Obj.priority.prName }}
+          </p> -->
+      <hr />
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

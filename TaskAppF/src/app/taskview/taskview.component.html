@@ -1,0 +1,37 @@
+<div class="note-container">
+  <h1>
+    Filter :
+    <button  (click)="lowList()">Low</button><span>&nbsp;</span><span>&nbsp;</span
+    ><span>&nbsp;</span>
+    <router-outlet name="low-list"></router-outlet>
+    <button  (click)="medList()">medium</button><span>&nbsp;</span><span>&nbsp;</span
+    ><span>&nbsp;</span>
+    <router-outlet name="med-list"></router-outlet>
+    <button  (click)="highList()">High</button>
+    <router-outlet name="high-list"></router-outlet>
+  </h1>
+  <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+  <div class="note">
+    <mat-card *ngFor="let Obj of tasks" class="task">
+      <mat-card-header>
+        <mat-card-title>{{ Obj.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-subtitle>{{ Obj.desc }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ Obj.dueDate }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ Obj.priority.prName }}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button class="btn btn-danger" (click)="deletetask(Obj.id)">DELETE</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary">Update</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- <app-high-list></app-high-list>
+
+    <app-medium-list></app-medium-list>
+
+    <app-low-list></app-low-list> -->
+  </div>
+</div>

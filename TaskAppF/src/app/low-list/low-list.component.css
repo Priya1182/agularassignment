@@ -1,0 +1,29 @@
+.note-container {
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1%
+    
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: row;
+}
+
+mat-card {
+    margin: 1%;
+    flex-wrap: wrap;
+}
+
+.example-card {
+
+    max-width: 300px;
+}

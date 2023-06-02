@@ -1,0 +1,39 @@
+<form
+  class="form-container"
+  [formGroup]="taskform"
+  (submit)="saveTask(taskform)"
+>
+  <mat-form-field class="form-element">
+    <mat-label>Task Title</mat-label>
+    <input formControlName="title" matInput />
+  </mat-form-field>
+
+  <mat-form-field class="form-element">
+    <mat-label>Task Descripon</mat-label>
+    <textarea formControlName="desc" matInput></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="form-element">
+    <mat-label>Choose a due date</mat-label>
+    <input matInput formControlName="dueDate" [matDatepicker]="dueDate" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="dueDate"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #dueDate></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="form-element">
+    <mat-label>Priority Level</mat-label>
+    <mat-select formControlName="priority">
+      <mat-option [value]="null" disabled>Select Task Priority</mat-option>
+      <mat-option *ngFor="let pObj of prd" [value]="pObj">
+        {{ pObj.prName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button class="btn btn-success">Save Note</button>
+  <br />
+</form>

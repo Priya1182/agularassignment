@@ -1,0 +1,35 @@
+/* :host {
+    /* display: flex;
+    flex-direction: row;*/
+    /* align-items: center;  */
+    
+
+/* } */ 
+
+.form-container {
+    background-color:rgb(190, 214, 214);;
+    display: flex;
+    border-radius: 5%;
+    width: 400px;
+    flex-direction: column; 
+    margin-top: 4%;
+    margin-left: 30%;
+
+}
+
+.form-element {
+    background-color: rgb(190, 214, 214);
+    margin:4%;
+    display: flex;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    /* flex-direction: column; */
+}
+.btn{
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 1%;
+   
+}
+
